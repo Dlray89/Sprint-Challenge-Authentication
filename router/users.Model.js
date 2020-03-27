@@ -9,8 +9,8 @@ module.exports = {
 }
 
 
-async function add(){
-const [id] = await userDB("users").insert(user)
+async function add(user){
+const [id] = await userDB("users").insert(user, "id")
 
 return findById(id)
 }
